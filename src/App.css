@@ -1,0 +1,36 @@
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.image {
+  flex: 1 1 calc(33.333% - 20px);
+  margin: 10px;
+}
+
+.image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.image img:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .image {
+    flex: 1 1 calc(50% - 20px);
+  }
+}
+
+@media (max-width: 480px) {
+  .image {
+    flex: 1 1 calc(100% - 20px);
+  }
+}
